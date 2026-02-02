@@ -6,28 +6,28 @@ export const ARTWORKS: Artwork[] = [
     title: "DYNAMISM OF A CYCLIST",
     year: "1913",
     artist: "UMBERTO BOCCIONI",
-    imgUrl: "https://picsum.photos/600/800?random=1"
+    imgUrl: "https://lh3.googleusercontent.com/d/10dOzZjP_fDVJ-q9IO00ORRubPN8G6uLp"
   },
   {
     id: 2,
     title: "SPEED OF AUTOMOBILE",
     year: "1913",
     artist: "GIACOMO BALLA",
-    imgUrl: "https://picsum.photos/600/800?random=2"
+    imgUrl: "https://lh3.googleusercontent.com/d/1bgafANoGPP41RWdoapDkjwHSVVlTOZ3Y"
   },
   {
     id: 3,
     title: "ARMORED TRAIN",
     year: "1915",
     artist: "GINO SEVERINI",
-    imgUrl: "https://picsum.photos/600/800?random=3"
+    imgUrl: "https://lh3.googleusercontent.com/d/1IN74xLLScf1kCQQz1PO4PATxBT5Rj2_P"
   },
   {
     id: 4,
     title: "THE CITY RISES",
     year: "1910",
     artist: "UMBERTO BOCCIONI",
-    imgUrl: "https://picsum.photos/600/800?random=4"
+    imgUrl: "https://lh3.googleusercontent.com/d/1sEckVnQqS0j_JbTTauf2Cw8t4XQFcDmx"
   }
 ];
 

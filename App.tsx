@@ -9,6 +9,8 @@ import Biography from './components/Biography';
 import PoemAnalysis from './components/PoemAnalysis';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
+import VelocityBreak from './components/VelocityBreak';
+import Cinema from './components/Cinema';
 
 const App: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -86,14 +88,11 @@ const App: React.FC = () => {
         {/* New Manifesto Section */}
         <Manifesto />
         
-        {/* Quote Break */}
-        <div className="py-32 bg-[#f2eee3]">
-          <div className="container mx-auto px-4">
-             <p className="text-3xl md:text-5xl font-bold uppercase leading-tight max-w-5xl mx-auto text-center border-l-8 border-[#ff2a00] pl-8 py-12">
-               "We stand on the last promontory of the centuries! Why should we look back?"
-             </p>
-          </div>
-        </div>
+        {/* REPLACED: Quote Break with Kinetic VelocityBreak */}
+        <VelocityBreak />
+
+        {/* NEW: Cinema Video Section */}
+        <Cinema />
 
         {/* New Biography Section */}
         <Biography />

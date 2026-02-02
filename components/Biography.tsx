@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { gsap, ScrollTrigger } from '../services/animationService';
-import { HISTORY_CONTENT } from '../constants';
+import { HISTORY_CONTENT, ARTWORKS } from '../constants';
 
 const Biography: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -137,7 +137,7 @@ const Biography: React.FC = () => {
             <div className="md:w-2/3">
                 <div className="mb-12 relative h-[60vh] overflow-hidden border-2 border-[#ff2a00] group">
                     <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Filippo_Tommaso_Marinetti.jpg" 
+                        src="https://lh3.googleusercontent.com/d/1io0oCLeVisFH-FkanlEvTChEC41WLyjv" 
                         alt="Marinetti" 
                         className="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-110 transition-transform duration-1000"
                     />
@@ -161,9 +161,25 @@ const Biography: React.FC = () => {
                 <p className="text-[#ff2a00] font-mono">{HISTORY_CONTENT.sections[1].subtitle}</p>
             </div>
             <div className="md:w-2/3">
-                <p className="text-2xl text-white mb-12 italic border-l-4 border-[#ff2a00] pl-6 py-2">
-                    {HISTORY_CONTENT.sections[1].intro}
-                </p>
+                {/* Intro Layout with Image */}
+                <div className="flex flex-col xl:flex-row gap-8 mb-12">
+                     <div className="xl:w-1/2">
+                         <p className="text-2xl text-white italic border-l-4 border-[#ff2a00] pl-6 py-2">
+                            {HISTORY_CONTENT.sections[1].intro}
+                         </p>
+                     </div>
+                     <div className="xl:w-1/2 relative h-64 xl:h-80 overflow-hidden border border-[#333] group">
+                          <img 
+                            src={ARTWORKS[3].imgUrl} 
+                            alt="The City Rises" 
+                            className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                          />
+                          <div className="absolute bottom-0 right-0 bg-black/80 px-2 py-1">
+                             <span className="text-[10px] font-mono uppercase text-[#ff2a00]">Boccioni — The City Rises</span>
+                          </div>
+                     </div>
+                </div>
+
                 <div id="ideology-grid" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {HISTORY_CONTENT.sections[1].points?.map((point, i) => (
                         <div key={i} className="ideology-card p-8 bg-[#151515] border border-[#333] hover:border-[#ff2a00] transition-colors duration-300 flex flex-col">
@@ -185,9 +201,25 @@ const Biography: React.FC = () => {
                 <p className="text-[#ff2a00] font-mono">{HISTORY_CONTENT.sections[2].subtitle}</p>
             </div>
             <div className="md:w-2/3">
-                <p className="text-xl text-gray-400 mb-12">
-                   {HISTORY_CONTENT.sections[2].intro}
-                </p>
+                {/* Intro Layout with Image (Reversed for visual rhythm) */}
+                <div className="flex flex-col-reverse xl:flex-row gap-8 mb-12">
+                     <div className="xl:w-1/2 relative h-64 xl:h-80 overflow-hidden border border-[#333] group">
+                          <img 
+                            src={ARTWORKS[1].imgUrl} 
+                            alt="Speed of Automobile" 
+                            className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                          />
+                          <div className="absolute bottom-0 right-0 bg-black/80 px-2 py-1">
+                             <span className="text-[10px] font-mono uppercase text-[#ff2a00]">Balla — Speed of Automobile</span>
+                          </div>
+                     </div>
+                     <div className="xl:w-1/2 flex items-center">
+                         <p className="text-xl text-gray-400 border-r-4 border-[#333] pr-6 text-right">
+                           {HISTORY_CONTENT.sections[2].intro}
+                         </p>
+                     </div>
+                </div>
+
                 <div className="flex flex-col gap-12">
                     {HISTORY_CONTENT.sections[2].items?.map((item, i) => (
                         <div key={i} className="group border-b border-[#333] pb-12 hover:border-white transition-colors duration-500">
